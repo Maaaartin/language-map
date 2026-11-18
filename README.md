@@ -207,6 +207,30 @@ from `comparisons.tar.gz`. The command checks that the archive is a readable fil
 before extracting and does not delete existing JSON files. Files present in the
 archive overwrite their local copies; files outside the archive are preserved.
 
+Store the comparison archive as a GitHub Release asset with these commands
+(requires the GitHub CLI, installed with `brew install gh`, and `gh auth login`):
+
+```sh
+npm run compress:comparisons
+npm run upload:comparisons
+# On another checkout, before npm install/ci:
+npm run download:comparisons
+npm ci
+# Or just extract the downloaded archive:
+npm run decompress:comparisons
+```
+
+The release commands default to `Maaaartin/language-map` and tag
+`comparison-data-v1`. Override them with, for example,
+`npm run upload:comparisons -- --tag comparison-data-v2 --repo OWNER/REPO`.
+Use the same tag when downloading. Upload creates the release from remote `main`
+if missing; an existing asset with the same name is rejected, so use a new tag for
+updated data. Downloads replace the local archive only after a successful download.
+Private repository downloads require GitHub authentication and repository access.
+These commands do not commit or push Git history. Release storage also requires
+removing the archive from any unpushed commits and ignoring it to avoid GitHub's
+regular Git file limit.
+
 Keep the reference CSV and its source/checksum metadata in version control, along
 with `data/glottolog/classification.nex` and its metadata, scraped `data/languages.json`,
 and `data/comparisons/*.json`. Derived mapping
