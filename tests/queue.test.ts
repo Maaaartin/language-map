@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { setImmediate } from 'node:timers/promises';
 import { runQueue } from '../scripts/queue.js';
 import { Client, sleep } from '../scripts/lib.js';
 import { graphFileName } from '../scripts/graph-files.js';
@@ -134,16 +135,33 @@ test('CLI queues every language, limits active requests, checkpoints, and resume
     await rm(dir, { recursive: true, force: true });
   }
 });
-test('concurrent HTTP workers share the request-start interval', async () => {
+test('concurrent HTTP workers share the request-start interval', async t => {
+  t.mock.timers.enable({ apis: ['Date', 'setTimeout'], now: 1000 });
   const starts: number[] = [];
-  const server = createServer(async (_, res) => { starts.push(Date.now()); await sleep(150); res.end('ok'); });
-  await new Promise<void>(resolve => server.listen(0, '127.0.0.1', resolve));
-  const addr = server.address(); assert.ok(addr && typeof addr !== 'string');
-  try {
-    const client = new Client(60);
-    await Promise.all([1, 2, 3].map(() => client.get(`http://127.0.0.1:${addr.port}`)));
-    assert.equal(starts.length, 3);
-    assert.ok(starts[1] - starts[0] >= 45, `Request gap was ${starts[1] - starts[0]}ms`);
-    assert.ok(starts[2] - starts[1] >= 45, `Request gap was ${starts[2] - starts[1]}ms`);
-  } finally { await new Promise<void>((resolve, reject) => server.close(error => error ? reject(error) : resolve())); }
+  let active = 0;
+  // Observe client starts directly: socket setup and server scheduling can bunch
+  // arrival times even when fetch calls are correctly spaced.
+  t.mock.method(globalThis, 'fetch', async () => {
+    starts.push(Date.now()); active++;
+    await sleep(150);
+    active--;
+    return new Response('ok');
+  });
+  const client = new Client(60);
+  const responses = Promise.all([1, 2, 3].map(() => client.get('https://example.test/')));
+  // Flush promise continuations using the real event loop after each clock step.
+  await setImmediate();
+  assert.deepEqual(starts, [1000]);
+  for (const expected of [[1000, 1060], [1000, 1060, 1120]]) {
+    t.mock.timers.tick(59);
+    await setImmediate();
+    assert.deepEqual(starts, expected.slice(0, -1));
+    t.mock.timers.tick(1);
+    await setImmediate();
+    assert.deepEqual(starts, expected);
+  }
+  assert.equal(active, 3); // Spacing starts must still allow overlapping requests.
+  t.mock.timers.tick(150);
+  assert.deepEqual(await responses, ['ok', 'ok', 'ok']);
+  assert.equal(active, 0);
 });
