@@ -2,7 +2,7 @@ import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promi
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readCatalog } from './catalog.mjs';
-import { catalogPlaceholder, embedCatalog } from './html-pages.mjs';
+import { catalogPlaceholder, embedCatalog, preparePage } from './html-pages.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const manifestName = '.source-outputs.json';
@@ -22,7 +22,8 @@ async function filesIn(directory) {
 }
 
 export async function syncFrontendAssets({ sourceDirectory = join(root, 'web/src'),
-  outputDirectory = join(root, 'web/dist'), dataDirectory = join(root, 'data'), catalog } = {}) {
+  outputDirectory = join(root, 'web/dist'), dataDirectory = join(root, 'data'), catalog,
+  production = false, basePath = '' } = {}) {
   const source = resolve(sourceDirectory), output = resolve(outputDirectory);
   if (source === output || source.startsWith(output + '/') || output.startsWith(source + '/')) throw new Error('Frontend source must be outside dist');
   const inputs = await filesIn(source);
@@ -33,7 +34,7 @@ export async function syncFrontendAssets({ sourceDirectory = join(root, 'web/src
     if (name.endsWith('.d.ts')) continue;
     if (name.endsWith('.ts')) {
       const base = name.slice(0, -3);
-      for (const extension of ['.js', '.js.map', '.d.ts']) expected.add(base + extension);
+      for (const extension of production ? ['.js'] : ['.js', '.js.map', '.d.ts']) expected.add(base + extension);
     } else { expected.add(name); assets.push({ file, name }); }
   }
   await mkdir(output, { recursive: true });
@@ -57,7 +58,7 @@ export async function syncFrontendAssets({ sourceDirectory = join(root, 'web/src
     const destination = join(output, name);
     await mkdir(dirname(destination), { recursive: true });
     if (name.endsWith('.html')) {
-      const template = await readFile(file, 'utf8');
+      const template = preparePage(await readFile(file, 'utf8'), basePath);
       const embedded = name === 'index.html' || name === 'map/index.html' || template.includes(catalogPlaceholder);
       if (embedded) catalog ??= await readCatalog(dataDirectory);
       await writeFile(destination, embedded ? embedCatalog(template, catalog) : template);

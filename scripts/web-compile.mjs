@@ -4,16 +4,16 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
-export function startFrontendCompiler({ watch = false, stdio = 'inherit' } = {}) {
+export function startFrontendCompiler({ watch = false, production = false, stdio = 'inherit' } = {}) {
   return spawn(process.execPath, [
     resolve(root, 'node_modules/typescript/lib/tsc.js'),
-    '--project', resolve(root, 'tsconfig.web.json'),
+    '--project', resolve(root, production ? 'tsconfig.web.prod.json' : 'tsconfig.web.json'),
     ...(watch ? ['--watch', '--preserveWatchOutput', '--locale', 'en'] : []),
   ], { cwd: root, stdio });
 }
 
-export async function compileFrontend() {
-  const child = startFrontendCompiler();
+export async function compileFrontend(options) {
+  const child = startFrontendCompiler(options);
   await new Promise((resolve, reject) => {
     child.once('error', reject);
     child.once('exit', (code, signal) => code === 0 ? resolve() :

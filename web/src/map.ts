@@ -6,6 +6,7 @@ import { prepareLocations, groupLocations, closestMappedLanguages } from './map-
 import { normalizeGraph, normalizeLanguageGraph } from './model.js';
 import { similarityWidth } from './edge-style.js';
 import { createJsonLoader } from './data-loader.js';
+import { sitePath } from './site-path.js';
 import { readLanguageData } from './page-data.js';
 
 const dataLoader = createJsonLoader();
@@ -32,14 +33,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   .on('tileerror', () => { tileFailed = true; $('tile-warning').hidden = false; })
   .on('load', () => { if (!tileFailed) $('tile-warning').hidden = true; }).addTo(map);
 
-function updateGraphLink() { $('graph-link').href = `/${window.location.search}`; }
+function updateGraphLink() { $('graph-link').href = `${sitePath('/')}${window.location.search}`; }
 function setStatus(text: string, retry = false) {
   $('geo-status-text').textContent = text;
   $('geo-status').hidden = !text;
   $('retry-locations').hidden = !retry;
 }
 function graphLink(id: string) {
-  const url = new URL('/', window.location.origin);
+  const url = new URL(sitePath('/'), window.location.origin);
   url.searchParams.set('language', id);
   return url.pathname + url.search;
 }

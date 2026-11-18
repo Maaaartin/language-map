@@ -1,5 +1,14 @@
 export const catalogPlaceholder = '<!-- LANGUAGE_CATALOG -->';
 
+// Root-relative source URLs keep local development simple. Prefix them for Pages.
+export function preparePage(html, basePath = '') {
+  const base = basePath.replace(/\/$/, '');
+  if (base && !/^\/(?:[\w-]+\/)*[\w.-]+$/.test(base)) throw new Error('Invalid site base path');
+  return html.replace(/\b(href|src)=(['"])\/(?!\/)(.*?)\2/g,
+    (_match, attribute, quote, path) => `${attribute}=${quote}${base}/${path === 'map' ? 'map/' : path}${quote}`)
+    .replace('<head>', `<head>\n  <meta name="site-base" content="${base}/">`);
+}
+
 export function embedCatalog(html, catalog) {
   if (html.split(catalogPlaceholder).length !== 2) throw new Error('HTML template needs exactly one language catalog placeholder');
   // JSON is data, not executable JavaScript. Escape HTML-significant characters

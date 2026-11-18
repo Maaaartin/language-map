@@ -1,4 +1,4 @@
-import { embedCatalog } from '../../scripts/html-pages.mjs';
+import { embedCatalog, preparePage } from '../../scripts/html-pages.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -14,10 +14,10 @@ const input = { nodes: ['A', 'B', 'C', 'D'].map(id => ({ id, label: id })), edge
 ] };
 let instance = 0;
 const pathFor = id => `/graphs/${createHash('sha256').update(id).digest('hex')}.json`;
-async function withApp(url, run, { fetchGraph, data = input } = {}) {
+async function withApp(url, run, { fetchGraph, data = input, basePath = '' } = {}) {
   const html = await readFile(new URL('../src/index.html', import.meta.url), 'utf8');
   const metadata = { languages: data.nodes.map(n => ({ ...n, graphFile: pathFor(n.id) })), comparisonCount: data.edges.length };
-  const dom = new JSDOM(embedCatalog(html, metadata), { url });
+  const dom = new JSDOM(embedCatalog(preparePage(html, basePath), metadata), { url });
   const { window } = dom, document = window.document;
   const map = document.querySelector('.map');
   let width = 800, height = 650, resized;
@@ -33,7 +33,7 @@ async function withApp(url, run, { fetchGraph, data = input } = {}) {
     ResizeObserver: class { constructor(callback) { resized = callback; } observe() {} },
     fetch: async (url, options) => {
       requests.push({ url, options });
-      const center = data.nodes.find(n => pathFor(n.id) === url)?.id;
+      const center = data.nodes.find(n => basePath + pathFor(n.id) === url)?.id;
       assert.ok(center, `Unexpected data request: ${url}`);
       const edges = data.edges.filter(e => e.source === center || e.target === center);
       const ids = new Set([center, ...edges.flatMap(e => [e.source, e.target])]);
@@ -85,6 +85,19 @@ async function withApp(url, run, { fetchGraph, data = input } = {}) {
     }
   }
 }
+
+test('Pages project path is preserved in graph requests, navigation, and URL state', async () => {
+  await withApp('https://maaaartin.github.io/language-map/?language=A', async ({ window, document, requests, clickNode }) => {
+    assert.deepEqual(requests.map(r => r.url), ['/language-map' + pathFor('A')]);
+    assert.equal(new URL(document.getElementById('geography-link').href).pathname, '/language-map/map/');
+    await clickNode('B');
+    assert.equal(window.location.pathname, '/language-map/');
+    const link = new URL(document.getElementById('geography-link').href);
+    assert.equal(link.pathname, '/language-map/map/');
+    assert.equal(link.searchParams.get('compare'), 'B');
+    assert.equal(new URL(document.querySelector('script[type="module"]').src).pathname, '/language-map/app.js');
+  }, { basePath: '/language-map' });
+});
 
 test('searchable start selector loads only names, then fetches comparisons and preserves the two-click interaction', async () => {
   await withApp('http://localhost/', async ({ window, document, requests, flushFrame, clickNode, assertCentered, chooseStart, resize }) => {

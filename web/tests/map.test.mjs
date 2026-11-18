@@ -1,4 +1,4 @@
-import { embedCatalog } from '../../scripts/html-pages.mjs';
+import { embedCatalog, preparePage } from '../../scripts/html-pages.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -39,11 +39,11 @@ test('closest matches are ranked after excluding missing locations', () => {
 });
 
 let instance = 0;
-async function withMap(url, run, { fail = false, graphResponse } = {}) {
+async function withMap(url, run, { fail = false, graphResponse, basePath = '' } = {}) {
   const html = await readFile(new URL('../src/map/index.html', import.meta.url), 'utf8');
   const leaflet = await readFile(new URL('../../node_modules/leaflet/dist/leaflet-src.js', import.meta.url), 'utf8');
   const metadata = { languages: comparisonNodes.map(n => ({ ...n, graphFile: pathFor(n.id) })), comparisonCount: comparisonEdges.length };
-  const dom = new JSDOM(embedCatalog(html, metadata), { url, runScripts: 'outside-only', pretendToBeVisual: true });
+  const dom = new JSDOM(embedCatalog(preparePage(html, basePath), metadata), { url, runScripts: 'outside-only', pretendToBeVisual: true });
   const { window } = dom, document = window.document;
   const container = document.getElementById('geographic-map');
   for (const [key, value] of Object.entries({ clientWidth: 1000, clientHeight: 650, offsetWidth: 1000, offsetHeight: 650 })) Object.defineProperty(container, key, { value });
@@ -54,8 +54,8 @@ async function withMap(url, run, { fail = false, graphResponse } = {}) {
     ResizeObserver: class { observe() {} disconnect() {} },
     fetch: async (url, options) => {
       requests.push({ url, options });
-      if (url === '/languages-enriched.json') return { ok: !fail, status: fail ? 404 : 200, json: async () => data };
-      const center = comparisonNodes.find(n => pathFor(n.id) === url)?.id;
+      if (url === basePath + '/languages-enriched.json') return { ok: !fail, status: fail ? 404 : 200, json: async () => data };
+      const center = comparisonNodes.find(n => basePath + pathFor(n.id) === url)?.id;
       assert.ok(center, `Unexpected comparison request: ${url}`);
       const edges = comparisonEdges.filter(e => e.source === center || e.target === center);
       const ids = new Set([center, ...edges.flatMap(e => [e.source, e.target])]);
@@ -77,6 +77,18 @@ async function withMap(url, run, { fail = false, graphResponse } = {}) {
     }
   }
 }
+
+test('Pages nested map loads prefixed coordinates and graphs and links back to the project root', async () => {
+  await withMap('https://maaaartin.github.io/language-map/map/?language=Abkhaz', async ({ window, document, requests }) => {
+    assert.deepEqual(requests.map(r => r.url), ['/language-map/languages-enriched.json', '/language-map' + pathFor('Abkhaz')]);
+    const link = new URL(document.getElementById('graph-link').href);
+    assert.equal(link.pathname, '/language-map/');
+    assert.equal(link.searchParams.get('language'), 'Abkhaz');
+    assert.equal(window.location.pathname, '/language-map/map/');
+    assert.match(document.querySelector('.geo-popup a').getAttribute('href'), /^\/language-map\/\?language=/);
+    assert.equal(document.querySelector('link[rel="preload"]').getAttribute('href'), '/language-map/languages-enriched.json');
+  }, { basePath: '/language-map' });
+});
 
 test('geographic page loads enriched JSON and real Leaflet pins at latitude/longitude with safe popups and search', async () => {
   await withMap('http://localhost/map', async ({ window, document, requests, map, L }) => {

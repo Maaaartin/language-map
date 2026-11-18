@@ -1,3 +1,5 @@
+import { sitePath } from './site-path.js';
+
 // Per-page JSON cache: reuse preloaded HTTP responses and in-flight requests.
 export function createJsonLoader({ fetcher = globalThis.fetch.bind(globalThis), ttlMs = 15_000,
   maxEntries = 32 }: { fetcher?: typeof fetch; ttlMs?: number; maxEntries?: number } = {}) {
@@ -17,7 +19,7 @@ export function createJsonLoader({ fetcher = globalThis.fetch.bind(globalThis), 
     }
     const entry: Entry = { ready: false, expires: 0, promise: Promise.resolve(undefined) };
     entry.promise = (async () => {
-      const response = await fetcher(path, { cache: 'default', priority });
+      const response = await fetcher(sitePath(path), { cache: 'default', priority });
       if (!response.ok) throw new Error(`HTTP ${response.status} loading ${path}`);
       return response.json();
     })().then(data => {

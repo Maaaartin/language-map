@@ -3,9 +3,10 @@ import { fileURLToPath } from 'node:url';
 import { startFrontendCompiler } from './web-compile.mjs';
 import { watchFrontendAssets } from './web-asset-watch.mjs';
 import { join } from 'node:path';
+import { buildWebsite } from './web-build.mjs';
 
 // Complete a successful initial build before starting the server or the watcher.
-await import('./web-build.mjs');
+await buildWebsite({ production: false, basePath: '' });
 const root = fileURLToPath(new URL('../', import.meta.url));
 const compiler = startFrontendCompiler({ watch: true, stdio: ['inherit', 'pipe', 'inherit'] });
 const children = [compiler,

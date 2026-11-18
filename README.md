@@ -23,6 +23,30 @@ and prevent emitting broken JavaScript. `npm run build` performs one compilation
 prepares the static pages and assets. `npm run typecheck` checks both frontend and
 scraper code; `npm test` compiles the frontend before running the tests.
 
+Production builds use `tsconfig.web.prod.json`: TypeScript emits only `.js` files,
+without generating source maps or declarations. HTML, CSS, vendor assets, and JSON
+datasets are also included in `web/dist/`. Development retains source maps and declarations.
+
+### GitHub Pages
+
+The workflow in `.github/workflows/pages.yml` builds and deploys on pushes to `main`,
+and can also be run manually from Actions. In repository **Settings → Pages**, set
+**Build and deployment → Source** to **GitHub Actions** before the first run.
+The default URL is **https://maaaartin.github.io/language-map/**.
+
+CI downloads `comparisons.tar.gz` from the `comparison-data-v1` release using the
+workflow token, installs dependencies, regenerates graph exports offline, runs the
+checks, and publishes `web/dist/`. That release must exist before deployment;
+use `npm run compress:comparisons` and `npm run upload:comparisons` to create it.
+No scraping runs during deployment.
+
+The build uses the Pages base path for assets, navigation, and data requests,
+including the nested geographic page. To build for that path locally:
+
+```sh
+SITE_BASE_PATH=/language-map npm run build
+```
+
 Never edit or commit files under `web/dist/`. Keep the sources in `web/src/`, including
 `web/src/browser.d.ts` (the handwritten browser-global types).
 Imports intentionally use `.js` extensions so compiled ES modules load in browsers;

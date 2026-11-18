@@ -36,6 +36,26 @@ test('frontend asset sync copies sources and prunes outputs of renamed and delet
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
+test('production asset sync removes development compiler outputs and prefixes page URLs', async () => {
+  const { syncFrontendAssets } = await import(new URL('../scripts/web-assets.mjs', import.meta.url).href);
+  const directory = await mkdtemp(join(tmpdir(), 'language-production-'));
+  const source = join(directory, 'src'), output = join(directory, 'dist');
+  try {
+    await mkdir(source); await mkdir(output);
+    await writeFile(join(source, 'app.ts'), 'export {};');
+    await writeFile(join(source, 'index.html'), '<head></head><script src="/app.js"></script><a href="/map">Map</a><!-- LANGUAGE_CATALOG -->');
+    for (const extension of ['js', 'js.map', 'd.ts']) await writeFile(join(output, `app.${extension}`), 'compiled');
+    await syncFrontendAssets({ sourceDirectory: source, outputDirectory: output, production: true,
+      basePath: '/language-map', catalog: { languages: [], comparisonCount: 0 } });
+    await access(join(output, 'app.js'));
+    for (const extension of ['js.map', 'd.ts']) await assert.rejects(access(join(output, `app.${extension}`)));
+    const page = await readFile(join(output, 'index.html'), 'utf8');
+    assert.match(page, /name="site-base" content="\/language-map\/"/);
+    assert.match(page, /src="\/language-map\/app.js"/);
+    assert.match(page, /href="\/language-map\/map\/"/);
+  } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
 test('asset watcher rebuilds HTML on template edits and catalog changes', async () => {
   const { watchFrontendAssets } = await import(new URL('../scripts/web-asset-watch.mjs', import.meta.url).href);
   const directory = await mkdtemp(join(tmpdir(), 'language-watch-'));

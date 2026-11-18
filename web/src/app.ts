@@ -10,6 +10,7 @@ import { anchorSelection, viewportTransform, comparisonDistance, constrainConnec
 import { readUrlState, writeUrlState } from './url-state.js';
 import { similarityWidth } from './edge-style.js';
 import { createJsonLoader } from './data-loader.js';
+import { sitePath } from './site-path.js';
 import { readLanguageData } from './page-data.js';
 makeMovablePanel($('group-settings'), $('group-settings-handle'));
 const d3 = window.d3;
@@ -43,7 +44,7 @@ svg.call(zoom).on('dblclick.zoom', null);
 function syncUrl(method: 'push' | 'replace' = 'push') {
   const href = writeUrlState(window.location.href, { center: selected, compare: compared, similarity: automaticThreshold ? null : Math.round(threshold * 100), levels, grouping, groupLanguages });
   if (href !== window.location.href) window.history[`${method}State`](null, '', href);
-  $('geography-link').href = `/map${new URL(href).search}`;
+  $('geography-link').href = `${sitePath('/map/')}${new URL(href).search}`;
 }
 async function restoreUrl({ keepLayout = false } = {}) {
   if (!catalog.length) return;
