@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Map — Geographic atlas</title>
+  <meta name="description" content="Explore language reference locations on an interactive OpenStreetMap atlas.">
+  <!-- LANGUAGE_CATALOG -->
+  <link rel="preload" href="/languages-enriched.json" as="fetch" type="application/json" crossorigin="anonymous">
+  <link rel="modulepreload" href="/data-loader.js">
+  <link rel="modulepreload" href="/page-data.js">
+  <link rel="modulepreload" href="/dom.js">
+  <link rel="modulepreload" href="/map-model.js">
+  <link rel="modulepreload" href="/model.js">
+  <link rel="modulepreload" href="/edge-style.js">
+  <link rel="modulepreload" href="/family-groups.js">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/navigation.css"><link rel="stylesheet" href="/map.css">
+  <script src="/vendor/leaflet/leaflet.js" defer></script>
+  <script type="module" src="/map.js"></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="/"><span class="brand-mark">Ӝ</span> language<span class="brand-light">map</span><span class="beta">ATLAS</span></a><nav class="view-nav" aria-label="View"><a id="graph-link" href="/">Graph</a><a href="/map" aria-current="page">Map</a></nav></header>
+  <main class="geo-layout">
+    <aside class="sidebar geo-sidebar">
+      <div class="eyebrow"><span></span> A GEOGRAPHIC LANGUAGE ATLAS</div>
+      <h1>Language has<br><em>a place.</em></h1>
+      <p class="intro">Explore the reference locations behind the languages. Choose a pin to discover more.</p>
+      <div class="stats"><div><strong id="located-count">—</strong><span>with coordinates</span></div><div><strong id="unlocated-count">—</strong><span>without a location</span></div></div>
+      <label class="field-label" for="map-search">Find a language or country</label>
+      <div class="search-box"><span aria-hidden="true">⌕</span><input id="map-search" type="search" placeholder="Name, country, or ISO code…" autocomplete="off"></div>
+      <div class="geo-filter"><label class="field-label" for="map-level">Record type</label><select id="map-level"><option value="all">All mapped records</option><option value="language">Languages</option><option value="dialect">Dialects</option><option value="family">Language families</option></select></div>
+      <section id="closest-panel" class="closest-panel" aria-labelledby="closest-title" hidden>
+        <div class="closest-heading"><h2 id="closest-title">Closest languages</h2><button id="clear-closest" type="button" aria-label="Clear connections">×</button></div>
+        <p id="closest-status" role="status"></p>
+        <button id="retry-closest" class="button" type="button" hidden>Retry comparisons</button>
+        <ol id="closest-list" class="closest-list"></ol>
+      </section>
+      <p id="map-summary" class="geo-summary" role="status">Loading locations…</p>
+      <div id="language-list" class="language-list" aria-label="Mapped languages"></div>
+      <div class="geo-footer"><p>Points are Glottolog reference locations, not the full area where a language is spoken. Family records may use group centroids; historical records do not imply present-day usage.</p><a href="https://github.com/glottolog/glottolog-cldf" target="_blank" rel="noopener noreferrer">Glottolog · CC BY 4.0 ↗</a></div>
+    </aside>
+    <section class="geo-map-shell" aria-label="Geographic language map">
+      <div id="geographic-map" aria-label="OpenStreetMap with language location pins"></div>
+      <div class="geo-map-tools"><button id="fit-locations" class="button" disabled>⤢ Show all locations</button></div>
+      <div id="geo-status" class="geo-status" role="status"><span id="geo-status-text">Loading language locations…</span><button id="retry-locations" class="button" hidden>Retry</button></div>
+      <div id="tile-warning" class="tile-warning" role="status" hidden>Map tiles could not load. Check your internet connection; language pins are still available.</div>
+      <div class="geo-legend"><span><i class="level-language"></i> Language</span><span><i class="level-dialect"></i> Dialect</span><span><i class="level-family"></i> Family</span><span>Numbered pins share a location</span><span class="edge-scale">Less similar <b></b><b></b><b></b> More similar</span></div>
+    </section>
+  </main>
+</body>
+</html>

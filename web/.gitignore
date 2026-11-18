@@ -1,0 +1,2 @@
+# Disposable build output; all editable frontend files live in src/.
+/dist/

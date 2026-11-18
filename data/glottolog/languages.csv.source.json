@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/glottolog/glottolog-cldf/master/cldf/languages.csv",
+  "sourceRepository": "https://github.com/glottolog/glottolog-cldf",
+  "downloadedAt": "2026-11-15T11:43:35.538Z",
+  "sha256": "ecadbfd440f3d0c28182f676b7e49c6e38fd3d40774c7ae3d90bf28ca137fe90",
+  "rowCount": 27275,
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+}

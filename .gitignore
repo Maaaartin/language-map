@@ -1,0 +1,29 @@
+node_modules/
+.DS_Store
+
+# Source datasets are intentionally NOT ignored:
+# data/languages.json, data/comparisons/, data/glottolog/, data/raw/
+!/data/glottolog/languages.csv
+!/data/glottolog/languages.csv.source.json
+
+# Generated graph exports, country mappings, and analysis outputs.
+/data/**/graph/
+/data/**/graph.json
+/data/**/nodes.csv
+/data/**/edges.csv
+/data/**/languages-enriched.json
+/data/**/mapping.json
+
+# Generated queue state, logs, locks, and temporary writes.
+/data/**/queues/
+/data/**/queue-progress.json
+/data/**/failures.jsonl
+/data/**/.compare.lock
+/data/**/*.tmp
+
+# Disposable frontend output. All editable frontend files live in web/src/.
+/web/dist/
+
+/data/comparisons/
+
+/comparisons.tar.gz

@@ -1,0 +1,2391 @@
+{
+  "schemaVersion": 1,
+  "sourceUrl": "http://elinguistics.net/Compare_Languages.aspx",
+  "fetchedAt": "2026-11-14T18:33:40.031Z",
+  "languages": [
+    {
+      "id": "Abkhaz",
+      "label": "Abkhaz"
+    },
+    {
+      "id": "Abnaki",
+      "label": "Abnaki"
+    },
+    {
+      "id": "Aceh",
+      "label": "Aceh"
+    },
+    {
+      "id": "Acholi",
+      "label": "Acholi"
+    },
+    {
+      "id": "Adyghe",
+      "label": "Adyghe"
+    },
+    {
+      "id": "Afar",
+      "label": "Afar"
+    },
+    {
+      "id": "Afrikaans",
+      "label": "Afrikaans"
+    },
+    {
+      "id": "Ainu",
+      "label": "Ainu"
+    },
+    {
+      "id": "Aja",
+      "label": "Aja"
+    },
+    {
+      "id": "Ajie",
+      "label": "Ajie"
+    },
+    {
+      "id": "Albanian_(Gheg)",
+      "label": "Albanian (Gheg)"
+    },
+    {
+      "id": "Albanian_(Tosk)",
+      "label": "Albanian (Tosk)"
+    },
+    {
+      "id": "Aleut",
+      "label": "Aleut"
+    },
+    {
+      "id": "Algonquin",
+      "label": "Algonquin"
+    },
+    {
+      "id": "Altai",
+      "label": "Altai"
+    },
+    {
+      "id": "Alur",
+      "label": "Alur"
+    },
+    {
+      "id": "Amharic",
+      "label": "Amharic"
+    },
+    {
+      "id": "Amis",
+      "label": "Amis"
+    },
+    {
+      "id": "Andi",
+      "label": "Andi"
+    },
+    {
+      "id": "Angas",
+      "label": "Angas"
+    },
+    {
+      "id": "Apache",
+      "label": "Apache"
+    },
+    {
+      "id": "Arabic",
+      "label": "Arabic"
+    },
+    {
+      "id": "Aramaic_(Syriac)",
+      "label": "Aramaic (Syriac)"
+    },
+    {
+      "id": "Arapaho",
+      "label": "Arapaho"
+    },
+    {
+      "id": "Arbanaski",
+      "label": "Arbanaski"
+    },
+    {
+      "id": "Areare",
+      "label": "Areare"
+    },
+    {
+      "id": "Arin",
+      "label": "Arin"
+    },
+    {
+      "id": "Armenian",
+      "label": "Armenian"
+    },
+    {
+      "id": "Armenian_(Classical)",
+      "label": "Armenian (Classical)"
+    },
+    {
+      "id": "Armenian_(Eastern)",
+      "label": "Armenian (Eastern)"
+    },
+    {
+      "id": "Assamese",
+      "label": "Assamese"
+    },
+    {
+      "id": "Assiniboine",
+      "label": "Assiniboine"
+    },
+    {
+      "id": "Assyro-Babylonian",
+      "label": "Assyro-Babylonian"
+    },
+    {
+      "id": "Asturian",
+      "label": "Asturian"
+    },
+    {
+      "id": "Atayal",
+      "label": "Atayal"
+    },
+    {
+      "id": "Avar",
+      "label": "Avar"
+    },
+    {
+      "id": "Avestan",
+      "label": "Avestan"
+    },
+    {
+      "id": "Aymara",
+      "label": "Aymara"
+    },
+    {
+      "id": "Azeri",
+      "label": "Azeri"
+    },
+    {
+      "id": "Badaga",
+      "label": "Badaga"
+    },
+    {
+      "id": "Badimaya",
+      "label": "Badimaya"
+    },
+    {
+      "id": "Bajau_(West_Coast)",
+      "label": "Bajau (West Coast)"
+    },
+    {
+      "id": "Balinese",
+      "label": "Balinese"
+    },
+    {
+      "id": "Balochi",
+      "label": "Balochi"
+    },
+    {
+      "id": "Bambara",
+      "label": "Bambara"
+    },
+    {
+      "id": "Bandi",
+      "label": "Bandi"
+    },
+    {
+      "id": "Baoule",
+      "label": "Baoule"
+    },
+    {
+      "id": "Basaa",
+      "label": "Basaa"
+    },
+    {
+      "id": "Bashkir",
+      "label": "Bashkir"
+    },
+    {
+      "id": "Basque",
+      "label": "Basque"
+    },
+    {
+      "id": "Belarusian",
+      "label": "Belarusian"
+    },
+    {
+      "id": "Bemba",
+      "label": "Bemba"
+    },
+    {
+      "id": "Bengali",
+      "label": "Bengali"
+    },
+    {
+      "id": "Bhojpuri",
+      "label": "Bhojpuri"
+    },
+    {
+      "id": "Bikol",
+      "label": "Bikol"
+    },
+    {
+      "id": "Biloxi",
+      "label": "Biloxi"
+    },
+    {
+      "id": "Blackfoot",
+      "label": "Blackfoot"
+    },
+    {
+      "id": "Bodo",
+      "label": "Bodo"
+    },
+    {
+      "id": "Bole",
+      "label": "Bole"
+    },
+    {
+      "id": "Brahui",
+      "label": "Brahui"
+    },
+    {
+      "id": "Brazilian",
+      "label": "Brazilian"
+    },
+    {
+      "id": "Breton",
+      "label": "Breton"
+    },
+    {
+      "id": "Buginese",
+      "label": "Buginese"
+    },
+    {
+      "id": "Bulgarian",
+      "label": "Bulgarian"
+    },
+    {
+      "id": "Bulu",
+      "label": "Bulu"
+    },
+    {
+      "id": "Bunun",
+      "label": "Bunun"
+    },
+    {
+      "id": "Burmese",
+      "label": "Burmese"
+    },
+    {
+      "id": "Burushaski",
+      "label": "Burushaski"
+    },
+    {
+      "id": "Buryat",
+      "label": "Buryat"
+    },
+    {
+      "id": "Bushi_(Mayotte)",
+      "label": "Bushi (Mayotte)"
+    },
+    {
+      "id": "Buyang",
+      "label": "Buyang"
+    },
+    {
+      "id": "Cahuilla",
+      "label": "Cahuilla"
+    },
+    {
+      "id": "Car",
+      "label": "Car"
+    },
+    {
+      "id": "Carolinian_Saipan",
+      "label": "Carolinian Saipan"
+    },
+    {
+      "id": "Carrier",
+      "label": "Carrier"
+    },
+    {
+      "id": "Catalan",
+      "label": "Catalan"
+    },
+    {
+      "id": "Catawba",
+      "label": "Catawba"
+    },
+    {
+      "id": "Cebuano",
+      "label": "Cebuano"
+    },
+    {
+      "id": "Chamorro_(Guam)",
+      "label": "Chamorro (Guam)"
+    },
+    {
+      "id": "Chechen",
+      "label": "Chechen"
+    },
+    {
+      "id": "Chehalis_Upper",
+      "label": "Chehalis Upper"
+    },
+    {
+      "id": "Cherokee",
+      "label": "Cherokee"
+    },
+    {
+      "id": "Cheyenne",
+      "label": "Cheyenne"
+    },
+    {
+      "id": "Chichewa",
+      "label": "Chichewa"
+    },
+    {
+      "id": "Chinese_(Cantonese)",
+      "label": "Chinese (Cantonese)"
+    },
+    {
+      "id": "Chinese_(Chaoyang)",
+      "label": "Chinese (Chaoyang)"
+    },
+    {
+      "id": "Chinese_(Dongshan)",
+      "label": "Chinese (Dongshan)"
+    },
+    {
+      "id": "Chinese_(Fuzhou)",
+      "label": "Chinese (Fuzhou)"
+    },
+    {
+      "id": "Chinese_(Gan)",
+      "label": "Chinese (Gan)"
+    },
+    {
+      "id": "Chinese_(Hainanese)",
+      "label": "Chinese (Hainanese)"
+    },
+    {
+      "id": "Chinese_(Hakka)",
+      "label": "Chinese (Hakka)"
+    },
+    {
+      "id": "Chinese_(Hakka_Hsinchu)",
+      "label": "Chinese (Hakka Hsinchu)"
+    },
+    {
+      "id": "Chinese_(Hokkien)",
+      "label": "Chinese (Hokkien)"
+    },
+    {
+      "id": "Chinese_(Hokkien_Taiwan)",
+      "label": "Chinese (Hokkien Taiwan)"
+    },
+    {
+      "id": "Chinese_(Huizhou)",
+      "label": "Chinese (Huizhou)"
+    },
+    {
+      "id": "Chinese_(Jin)",
+      "label": "Chinese (Jin)"
+    },
+    {
+      "id": "Chinese_(Mandarin)",
+      "label": "Chinese (Mandarin)"
+    },
+    {
+      "id": "Chinese_(Mandarin_Nantong)",
+      "label": "Chinese (Mandarin Nantong)"
+    },
+    {
+      "id": "Chinese_(Middle)",
+      "label": "Chinese (Middle)"
+    },
+    {
+      "id": "Chinese_(Old)",
+      "label": "Chinese (Old)"
+    },
+    {
+      "id": "Chinese_(Pinghua)",
+      "label": "Chinese (Pinghua)"
+    },
+    {
+      "id": "Chinese_(Putian)",
+      "label": "Chinese (Putian)"
+    },
+    {
+      "id": "Chinese_(Teochew)",
+      "label": "Chinese (Teochew)"
+    },
+    {
+      "id": "Chinese_(Wu_Shanghai)",
+      "label": "Chinese (Wu Shanghai)"
+    },
+    {
+      "id": "Chinese_(Wu_Wenzhou)",
+      "label": "Chinese (Wu Wenzhou)"
+    },
+    {
+      "id": "Chinese_(Xiang)",
+      "label": "Chinese (Xiang)"
+    },
+    {
+      "id": "Chinese_(Yongan)",
+      "label": "Chinese (Yongan)"
+    },
+    {
+      "id": "Chipewyan",
+      "label": "Chipewyan"
+    },
+    {
+      "id": "Chokwe",
+      "label": "Chokwe"
+    },
+    {
+      "id": "Chukchi",
+      "label": "Chukchi"
+    },
+    {
+      "id": "Chuvash",
+      "label": "Chuvash"
+    },
+    {
+      "id": "Comorian",
+      "label": "Comorian"
+    },
+    {
+      "id": "Coptic",
+      "label": "Coptic"
+    },
+    {
+      "id": "Cornish",
+      "label": "Cornish"
+    },
+    {
+      "id": "Corsican",
+      "label": "Corsican"
+    },
+    {
+      "id": "Creole_Guadeloupe",
+      "label": "Creole Guadeloupe"
+    },
+    {
+      "id": "Creole_Guyana",
+      "label": "Creole Guyana"
+    },
+    {
+      "id": "Creole_Guyane_FR",
+      "label": "Creole Guyane FR"
+    },
+    {
+      "id": "Creole_Haiti",
+      "label": "Creole Haiti"
+    },
+    {
+      "id": "Creole_Jamaica",
+      "label": "Creole Jamaica"
+    },
+    {
+      "id": "Creole_Mauritius",
+      "label": "Creole Mauritius"
+    },
+    {
+      "id": "Creole_Reunionnais",
+      "label": "Creole Reunionnais"
+    },
+    {
+      "id": "Creole_Seychelles",
+      "label": "Creole Seychelles"
+    },
+    {
+      "id": "Creole_St_Lucia",
+      "label": "Creole St Lucia"
+    },
+    {
+      "id": "Creole_St_Vincent",
+      "label": "Creole St Vincent"
+    },
+    {
+      "id": "Croatian",
+      "label": "Croatian"
+    },
+    {
+      "id": "Crow",
+      "label": "Crow"
+    },
+    {
+      "id": "Czech",
+      "label": "Czech"
+    },
+    {
+      "id": "Dagbani",
+      "label": "Dagbani"
+    },
+    {
+      "id": "Dakota",
+      "label": "Dakota"
+    },
+    {
+      "id": "Danish",
+      "label": "Danish"
+    },
+    {
+      "id": "Dargwa",
+      "label": "Dargwa"
+    },
+    {
+      "id": "Daur",
+      "label": "Daur"
+    },
+    {
+      "id": "Degexitan",
+      "label": "Degexitan"
+    },
+    {
+      "id": "Delaware_Munsee",
+      "label": "Delaware Munsee"
+    },
+    {
+      "id": "Dhivehi_(Maldivian)",
+      "label": "Dhivehi (Maldivian)"
+    },
+    {
+      "id": "Dinka",
+      "label": "Dinka"
+    },
+    {
+      "id": "Ditidaht",
+      "label": "Ditidaht"
+    },
+    {
+      "id": "Dizi",
+      "label": "Dizi"
+    },
+    {
+      "id": "Dogri",
+      "label": "Dogri"
+    },
+    {
+      "id": "Dogrib",
+      "label": "Dogrib"
+    },
+    {
+      "id": "Douala",
+      "label": "Douala"
+    },
+    {
+      "id": "Drehu",
+      "label": "Drehu"
+    },
+    {
+      "id": "Dusun",
+      "label": "Dusun"
+    },
+    {
+      "id": "Dutch",
+      "label": "Dutch"
+    },
+    {
+      "id": "Dzongkha",
+      "label": "Dzongkha"
+    },
+    {
+      "id": "Edo",
+      "label": "Edo"
+    },
+    {
+      "id": "Efik",
+      "label": "Efik"
+    },
+    {
+      "id": "Elamite",
+      "label": "Elamite"
+    },
+    {
+      "id": "English",
+      "label": "English"
+    },
+    {
+      "id": "Erzya",
+      "label": "Erzya"
+    },
+    {
+      "id": "Estonian",
+      "label": "Estonian"
+    },
+    {
+      "id": "Etruscan",
+      "label": "Etruscan"
+    },
+    {
+      "id": "Even",
+      "label": "Even"
+    },
+    {
+      "id": "Evenki",
+      "label": "Evenki"
+    },
+    {
+      "id": "Ewe",
+      "label": "Ewe"
+    },
+    {
+      "id": "Eyak",
+      "label": "Eyak"
+    },
+    {
+      "id": "Fang",
+      "label": "Fang"
+    },
+    {
+      "id": "Faroese",
+      "label": "Faroese"
+    },
+    {
+      "id": "Fijian",
+      "label": "Fijian"
+    },
+    {
+      "id": "Finnish",
+      "label": "Finnish"
+    },
+    {
+      "id": "Flemish",
+      "label": "Flemish"
+    },
+    {
+      "id": "Fon",
+      "label": "Fon"
+    },
+    {
+      "id": "French",
+      "label": "French"
+    },
+    {
+      "id": "Frisian",
+      "label": "Frisian"
+    },
+    {
+      "id": "Friulian",
+      "label": "Friulian"
+    },
+    {
+      "id": "Fula",
+      "label": "Fula"
+    },
+    {
+      "id": "Fur",
+      "label": "Fur"
+    },
+    {
+      "id": "Futuna_East",
+      "label": "Futuna East"
+    },
+    {
+      "id": "Ga",
+      "label": "Ga"
+    },
+    {
+      "id": "Galice_Taldash",
+      "label": "Galice Taldash"
+    },
+    {
+      "id": "Galician",
+      "label": "Galician"
+    },
+    {
+      "id": "Gamo",
+      "label": "Gamo"
+    },
+    {
+      "id": "Gaulish",
+      "label": "Gaulish"
+    },
+    {
+      "id": "Geez",
+      "label": "Geez"
+    },
+    {
+      "id": "Gelao",
+      "label": "Gelao"
+    },
+    {
+      "id": "Georgian",
+      "label": "Georgian"
+    },
+    {
+      "id": "German",
+      "label": "German"
+    },
+    {
+      "id": "Gilbertese",
+      "label": "Gilbertese"
+    },
+    {
+      "id": "Gondi",
+      "label": "Gondi"
+    },
+    {
+      "id": "Gothic",
+      "label": "Gothic"
+    },
+    {
+      "id": "Greek_(ancient)",
+      "label": "Greek (ancient)"
+    },
+    {
+      "id": "Greek_(modern)",
+      "label": "Greek (modern)"
+    },
+    {
+      "id": "Greenlandic_(Eastern)",
+      "label": "Greenlandic (Eastern)"
+    },
+    {
+      "id": "Greenlandic_(Western)",
+      "label": "Greenlandic (Western)"
+    },
+    {
+      "id": "Griko_Salento",
+      "label": "Griko Salento"
+    },
+    {
+      "id": "Guarani",
+      "label": "Guarani"
+    },
+    {
+      "id": "Gujarati",
+      "label": "Gujarati"
+    },
+    {
+      "id": "Gurindji",
+      "label": "Gurindji"
+    },
+    {
+      "id": "Gusii",
+      "label": "Gusii"
+    },
+    {
+      "id": "Hadiyya",
+      "label": "Hadiyya"
+    },
+    {
+      "id": "Haida",
+      "label": "Haida"
+    },
+    {
+      "id": "Haisla",
+      "label": "Haisla"
+    },
+    {
+      "id": "Hausa",
+      "label": "Hausa"
+    },
+    {
+      "id": "Hawaiian",
+      "label": "Hawaiian"
+    },
+    {
+      "id": "Hebrew",
+      "label": "Hebrew"
+    },
+    {
+      "id": "Heiltsuk",
+      "label": "Heiltsuk"
+    },
+    {
+      "id": "Herero",
+      "label": "Herero"
+    },
+    {
+      "id": "Hidatsa",
+      "label": "Hidatsa"
+    },
+    {
+      "id": "Hindi",
+      "label": "Hindi"
+    },
+    {
+      "id": "Hittite",
+      "label": "Hittite"
+    },
+    {
+      "id": "Hmong",
+      "label": "Hmong"
+    },
+    {
+      "id": "Huastec",
+      "label": "Huastec"
+    },
+    {
+      "id": "Huave",
+      "label": "Huave"
+    },
+    {
+      "id": "Huichol",
+      "label": "Huichol"
+    },
+    {
+      "id": "Hungarian",
+      "label": "Hungarian"
+    },
+    {
+      "id": "Hupa",
+      "label": "Hupa"
+    },
+    {
+      "id": "Hurrian",
+      "label": "Hurrian"
+    },
+    {
+      "id": "Ibibio",
+      "label": "Ibibio"
+    },
+    {
+      "id": "Icelandic",
+      "label": "Icelandic"
+    },
+    {
+      "id": "Igala",
+      "label": "Igala"
+    },
+    {
+      "id": "Igbo",
+      "label": "Igbo"
+    },
+    {
+      "id": "Ijaw",
+      "label": "Ijaw"
+    },
+    {
+      "id": "Ilocano",
+      "label": "Ilocano"
+    },
+    {
+      "id": "Ilonggo",
+      "label": "Ilonggo"
+    },
+    {
+      "id": "Indonesian",
+      "label": "Indonesian"
+    },
+    {
+      "id": "Ingrian",
+      "label": "Ingrian"
+    },
+    {
+      "id": "Ingush",
+      "label": "Ingush"
+    },
+    {
+      "id": "Irish",
+      "label": "Irish"
+    },
+    {
+      "id": "Istro-Romanian",
+      "label": "Istro-Romanian"
+    },
+    {
+      "id": "Italian",
+      "label": "Italian"
+    },
+    {
+      "id": "Itelmen",
+      "label": "Itelmen"
+    },
+    {
+      "id": "Japanese",
+      "label": "Japanese"
+    },
+    {
+      "id": "Javanese",
+      "label": "Javanese"
+    },
+    {
+      "id": "Jiamao",
+      "label": "Jiamao"
+    },
+    {
+      "id": "Jula",
+      "label": "Jula"
+    },
+    {
+      "id": "Jurchen",
+      "label": "Jurchen"
+    },
+    {
+      "id": "Kabardino_Cherkess",
+      "label": "Kabardino Cherkess"
+    },
+    {
+      "id": "Kabiye",
+      "label": "Kabiye"
+    },
+    {
+      "id": "Kabylian",
+      "label": "Kabylian"
+    },
+    {
+      "id": "Kalasha",
+      "label": "Kalasha"
+    },
+    {
+      "id": "Kalenjin",
+      "label": "Kalenjin"
+    },
+    {
+      "id": "Kalmyk",
+      "label": "Kalmyk"
+    },
+    {
+      "id": "Kamba",
+      "label": "Kamba"
+    },
+    {
+      "id": "Kangean",
+      "label": "Kangean"
+    },
+    {
+      "id": "Kannada",
+      "label": "Kannada"
+    },
+    {
+      "id": "Kansa",
+      "label": "Kansa"
+    },
+    {
+      "id": "Kanuri",
+      "label": "Kanuri"
+    },
+    {
+      "id": "Kaonde",
+      "label": "Kaonde"
+    },
+    {
+      "id": "Kapampangan",
+      "label": "Kapampangan"
+    },
+    {
+      "id": "Karachay-Balkar",
+      "label": "Karachay-Balkar"
+    },
+    {
+      "id": "Karakalpak",
+      "label": "Karakalpak"
+    },
+    {
+      "id": "Karelian",
+      "label": "Karelian"
+    },
+    {
+      "id": "Kashmiri",
+      "label": "Kashmiri"
+    },
+    {
+      "id": "Kashubian",
+      "label": "Kashubian"
+    },
+    {
+      "id": "Kativiri",
+      "label": "Kativiri"
+    },
+    {
+      "id": "Kato",
+      "label": "Kato"
+    },
+    {
+      "id": "Kaurna",
+      "label": "Kaurna"
+    },
+    {
+      "id": "Kazakh",
+      "label": "Kazakh"
+    },
+    {
+      "id": "Kedang",
+      "label": "Kedang"
+    },
+    {
+      "id": "Ket",
+      "label": "Ket"
+    },
+    {
+      "id": "Khakas",
+      "label": "Khakas"
+    },
+    {
+      "id": "Khanti",
+      "label": "Khanti"
+    },
+    {
+      "id": "Khmer",
+      "label": "Khmer"
+    },
+    {
+      "id": "Khowar",
+      "label": "Khowar"
+    },
+    {
+      "id": "Kiche",
+      "label": "Kiche"
+    },
+    {
+      "id": "Kikuyu",
+      "label": "Kikuyu"
+    },
+    {
+      "id": "Kimbundu",
+      "label": "Kimbundu"
+    },
+    {
+      "id": "Kinaray-a",
+      "label": "Kinaray-a"
+    },
+    {
+      "id": "Kinyarwanda",
+      "label": "Kinyarwanda"
+    },
+    {
+      "id": "Kiowa",
+      "label": "Kiowa"
+    },
+    {
+      "id": "Kirundi",
+      "label": "Kirundi"
+    },
+    {
+      "id": "Kituba",
+      "label": "Kituba"
+    },
+    {
+      "id": "Kivalliq",
+      "label": "Kivalliq"
+    },
+    {
+      "id": "Kodava",
+      "label": "Kodava"
+    },
+    {
+      "id": "Kolami",
+      "label": "Kolami"
+    },
+    {
+      "id": "Komi",
+      "label": "Komi"
+    },
+    {
+      "id": "Kongo",
+      "label": "Kongo"
+    },
+    {
+      "id": "Konkani",
+      "label": "Konkani"
+    },
+    {
+      "id": "Korean",
+      "label": "Korean"
+    },
+    {
+      "id": "Koryak",
+      "label": "Koryak"
+    },
+    {
+      "id": "Kosraean",
+      "label": "Kosraean"
+    },
+    {
+      "id": "Kott",
+      "label": "Kott"
+    },
+    {
+      "id": "Koyra_Chiini",
+      "label": "Koyra Chiini"
+    },
+    {
+      "id": "Koyukon",
+      "label": "Koyukon"
+    },
+    {
+      "id": "Kpelle",
+      "label": "Kpelle"
+    },
+    {
+      "id": "Kumyk",
+      "label": "Kumyk"
+    },
+    {
+      "id": "Kurdish",
+      "label": "Kurdish"
+    },
+    {
+      "id": "Kurdish_Sorani",
+      "label": "Kurdish Sorani"
+    },
+    {
+      "id": "Kurukh",
+      "label": "Kurukh"
+    },
+    {
+      "id": "Kuvi",
+      "label": "Kuvi"
+    },
+    {
+      "id": "Kwakwala",
+      "label": "Kwakwala"
+    },
+    {
+      "id": "Kwanyama",
+      "label": "Kwanyama"
+    },
+    {
+      "id": "Kwaya",
+      "label": "Kwaya"
+    },
+    {
+      "id": "Kyrgyz",
+      "label": "Kyrgyz"
+    },
+    {
+      "id": "Labrador_Inuttut",
+      "label": "Labrador Inuttut"
+    },
+    {
+      "id": "Ladin",
+      "label": "Ladin"
+    },
+    {
+      "id": "Lak",
+      "label": "Lak"
+    },
+    {
+      "id": "Lakota",
+      "label": "Lakota"
+    },
+    {
+      "id": "Lamaholot",
+      "label": "Lamaholot"
+    },
+    {
+      "id": "Lao",
+      "label": "Lao"
+    },
+    {
+      "id": "Latin",
+      "label": "Latin"
+    },
+    {
+      "id": "Latvian",
+      "label": "Latvian"
+    },
+    {
+      "id": "Letzebuergesch",
+      "label": "Letzebuergesch"
+    },
+    {
+      "id": "Lezgian",
+      "label": "Lezgian"
+    },
+    {
+      "id": "Ligurian",
+      "label": "Ligurian"
+    },
+    {
+      "id": "Lillooet",
+      "label": "Lillooet"
+    },
+    {
+      "id": "Lingala",
+      "label": "Lingala"
+    },
+    {
+      "id": "Lithuanian",
+      "label": "Lithuanian"
+    },
+    {
+      "id": "Livonian",
+      "label": "Livonian"
+    },
+    {
+      "id": "Loma",
+      "label": "Loma"
+    },
+    {
+      "id": "Lombard",
+      "label": "Lombard"
+    },
+    {
+      "id": "Longgu",
+      "label": "Longgu"
+    },
+    {
+      "id": "Lozi",
+      "label": "Lozi"
+    },
+    {
+      "id": "Luba-Kasai",
+      "label": "Luba-Kasai"
+    },
+    {
+      "id": "Luba-Katanga",
+      "label": "Luba-Katanga"
+    },
+    {
+      "id": "Luganda",
+      "label": "Luganda"
+    },
+    {
+      "id": "Lunda",
+      "label": "Lunda"
+    },
+    {
+      "id": "Luo",
+      "label": "Luo"
+    },
+    {
+      "id": "Lushootseed",
+      "label": "Lushootseed"
+    },
+    {
+      "id": "Luvale",
+      "label": "Luvale"
+    },
+    {
+      "id": "Luwian",
+      "label": "Luwian"
+    },
+    {
+      "id": "Lycian",
+      "label": "Lycian"
+    },
+    {
+      "id": "Maasai",
+      "label": "Maasai"
+    },
+    {
+      "id": "Macedonian",
+      "label": "Macedonian"
+    },
+    {
+      "id": "Madurese",
+      "label": "Madurese"
+    },
+    {
+      "id": "Magahi",
+      "label": "Magahi"
+    },
+    {
+      "id": "Maithili",
+      "label": "Maithili"
+    },
+    {
+      "id": "Makah",
+      "label": "Makah"
+    },
+    {
+      "id": "Makassarese",
+      "label": "Makassarese"
+    },
+    {
+      "id": "Makhuwa",
+      "label": "Makhuwa"
+    },
+    {
+      "id": "Malagasy",
+      "label": "Malagasy"
+    },
+    {
+      "id": "Malay",
+      "label": "Malay"
+    },
+    {
+      "id": "Malayalam",
+      "label": "Malayalam"
+    },
+    {
+      "id": "Maltese",
+      "label": "Maltese"
+    },
+    {
+      "id": "Malto",
+      "label": "Malto"
+    },
+    {
+      "id": "Mambwe_Lungu",
+      "label": "Mambwe Lungu"
+    },
+    {
+      "id": "Manchu",
+      "label": "Manchu"
+    },
+    {
+      "id": "Manda",
+      "label": "Manda"
+    },
+    {
+      "id": "Mandinka",
+      "label": "Mandinka"
+    },
+    {
+      "id": "Mangbetu",
+      "label": "Mangbetu"
+    },
+    {
+      "id": "Mansi",
+      "label": "Mansi"
+    },
+    {
+      "id": "Manx",
+      "label": "Manx"
+    },
+    {
+      "id": "Maori",
+      "label": "Maori"
+    },
+    {
+      "id": "Marathi",
+      "label": "Marathi"
+    },
+    {
+      "id": "Mari",
+      "label": "Mari"
+    },
+    {
+      "id": "Marquesan",
+      "label": "Marquesan"
+    },
+    {
+      "id": "Marshallese",
+      "label": "Marshallese"
+    },
+    {
+      "id": "Marwari",
+      "label": "Marwari"
+    },
+    {
+      "id": "Mattole",
+      "label": "Mattole"
+    },
+    {
+      "id": "Maya",
+      "label": "Maya"
+    },
+    {
+      "id": "Mazandarani",
+      "label": "Mazandarani"
+    },
+    {
+      "id": "Medumba",
+      "label": "Medumba"
+    },
+    {
+      "id": "Mehri",
+      "label": "Mehri"
+    },
+    {
+      "id": "Meitei",
+      "label": "Meitei"
+    },
+    {
+      "id": "Mele",
+      "label": "Mele"
+    },
+    {
+      "id": "Mende",
+      "label": "Mende"
+    },
+    {
+      "id": "Mewati",
+      "label": "Mewati"
+    },
+    {
+      "id": "Miami",
+      "label": "Miami"
+    },
+    {
+      "id": "Micmac",
+      "label": "Micmac"
+    },
+    {
+      "id": "Middle_Persian",
+      "label": "Middle Persian"
+    },
+    {
+      "id": "Mien",
+      "label": "Mien"
+    },
+    {
+      "id": "Minangkabau",
+      "label": "Minangkabau"
+    },
+    {
+      "id": "Mixe",
+      "label": "Mixe"
+    },
+    {
+      "id": "Mizo",
+      "label": "Mizo"
+    },
+    {
+      "id": "Moghol",
+      "label": "Moghol"
+    },
+    {
+      "id": "Mohawk",
+      "label": "Mohawk"
+    },
+    {
+      "id": "Moksha",
+      "label": "Moksha"
+    },
+    {
+      "id": "Mon",
+      "label": "Mon"
+    },
+    {
+      "id": "Mongolian",
+      "label": "Mongolian"
+    },
+    {
+      "id": "Mongo-Nkundu",
+      "label": "Mongo-Nkundu"
+    },
+    {
+      "id": "Montagnais",
+      "label": "Montagnais"
+    },
+    {
+      "id": "Montana_Salish",
+      "label": "Montana Salish"
+    },
+    {
+      "id": "Mossi",
+      "label": "Mossi"
+    },
+    {
+      "id": "Mycenaean",
+      "label": "Mycenaean"
+    },
+    {
+      "id": "Nahuatl",
+      "label": "Nahuatl"
+    },
+    {
+      "id": "Nanai",
+      "label": "Nanai"
+    },
+    {
+      "id": "Nancowry",
+      "label": "Nancowry"
+    },
+    {
+      "id": "Naskapi",
+      "label": "Naskapi"
+    },
+    {
+      "id": "Nauruan",
+      "label": "Nauruan"
+    },
+    {
+      "id": "Navajo",
+      "label": "Navajo"
+    },
+    {
+      "id": "Nayi",
+      "label": "Nayi"
+    },
+    {
+      "id": "Ndebele",
+      "label": "Ndebele"
+    },
+    {
+      "id": "Neapolitan",
+      "label": "Neapolitan"
+    },
+    {
+      "id": "Nenets",
+      "label": "Nenets"
+    },
+    {
+      "id": "Nengone",
+      "label": "Nengone"
+    },
+    {
+      "id": "Nepali",
+      "label": "Nepali"
+    },
+    {
+      "id": "Ngaanyatjarra",
+      "label": "Ngaanyatjarra"
+    },
+    {
+      "id": "Nganasan",
+      "label": "Nganasan"
+    },
+    {
+      "id": "Niuean",
+      "label": "Niuean"
+    },
+    {
+      "id": "Nivkh",
+      "label": "Nivkh"
+    },
+    {
+      "id": "Nogai",
+      "label": "Nogai"
+    },
+    {
+      "id": "Nooksack",
+      "label": "Nooksack"
+    },
+    {
+      "id": "Nootka",
+      "label": "Nootka"
+    },
+    {
+      "id": "Norwegian(bokmal)",
+      "label": "Norwegian(bokmal)"
+    },
+    {
+      "id": "Norwegian(nynorsk)",
+      "label": "Norwegian(nynorsk)"
+    },
+    {
+      "id": "Nsenga",
+      "label": "Nsenga"
+    },
+    {
+      "id": "Nuer",
+      "label": "Nuer"
+    },
+    {
+      "id": "Nyakyusa",
+      "label": "Nyakyusa"
+    },
+    {
+      "id": "Nyamwanga",
+      "label": "Nyamwanga"
+    },
+    {
+      "id": "Nyaneka",
+      "label": "Nyaneka"
+    },
+    {
+      "id": "Nyankole",
+      "label": "Nyankole"
+    },
+    {
+      "id": "Occitan",
+      "label": "Occitan"
+    },
+    {
+      "id": "Odia",
+      "label": "Odia"
+    },
+    {
+      "id": "Ojibwe",
+      "label": "Ojibwe"
+    },
+    {
+      "id": "Okanagan_Colville",
+      "label": "Okanagan Colville"
+    },
+    {
+      "id": "Old_Church_Slavonic",
+      "label": "Old Church Slavonic"
+    },
+    {
+      "id": "Old_Egyptian",
+      "label": "Old Egyptian"
+    },
+    {
+      "id": "Old_English",
+      "label": "Old English"
+    },
+    {
+      "id": "Old_High_German",
+      "label": "Old High German"
+    },
+    {
+      "id": "Old_Irish",
+      "label": "Old Irish"
+    },
+    {
+      "id": "Old_Nubian",
+      "label": "Old Nubian"
+    },
+    {
+      "id": "Old_Norse",
+      "label": "Old Norse"
+    },
+    {
+      "id": "Old_Persian",
+      "label": "Old Persian"
+    },
+    {
+      "id": "Omaha_Ponca",
+      "label": "Omaha Ponca"
+    },
+    {
+      "id": "Oodham",
+      "label": "Oodham"
+    },
+    {
+      "id": "Oromo",
+      "label": "Oromo"
+    },
+    {
+      "id": "Oroqen",
+      "label": "Oroqen"
+    },
+    {
+      "id": "Osage",
+      "label": "Osage"
+    },
+    {
+      "id": "Oscan",
+      "label": "Oscan"
+    },
+    {
+      "id": "Ossetic_(Digor)",
+      "label": "Ossetic (Digor)"
+    },
+    {
+      "id": "Ossetic_(Iron)",
+      "label": "Ossetic (Iron)"
+    },
+    {
+      "id": "Paici",
+      "label": "Paici"
+    },
+    {
+      "id": "Paiwan",
+      "label": "Paiwan"
+    },
+    {
+      "id": "Palauan",
+      "label": "Palauan"
+    },
+    {
+      "id": "Parthian",
+      "label": "Parthian"
+    },
+    {
+      "id": "Pashto",
+      "label": "Pashto"
+    },
+    {
+      "id": "Pengo",
+      "label": "Pengo"
+    },
+    {
+      "id": "Pennsylvania_Dutch",
+      "label": "Pennsylvania Dutch"
+    },
+    {
+      "id": "Persian",
+      "label": "Persian"
+    },
+    {
+      "id": "Phoenician",
+      "label": "Phoenician"
+    },
+    {
+      "id": "Phrygian",
+      "label": "Phrygian"
+    },
+    {
+      "id": "Piedmontese",
+      "label": "Piedmontese"
+    },
+    {
+      "id": "Polish",
+      "label": "Polish"
+    },
+    {
+      "id": "Portuguese",
+      "label": "Portuguese"
+    },
+    {
+      "id": "Prakrit_Maharashtri",
+      "label": "Prakrit Maharashtri"
+    },
+    {
+      "id": "Proto_Bantu",
+      "label": "Proto Bantu"
+    },
+    {
+      "id": "Proto_Indo_European",
+      "label": "Proto Indo European"
+    },
+    {
+      "id": "Provencal",
+      "label": "Provencal"
+    },
+    {
+      "id": "Prussian",
+      "label": "Prussian"
+    },
+    {
+      "id": "Punjabi",
+      "label": "Punjabi"
+    },
+    {
+      "id": "Qechi",
+      "label": "Qechi"
+    },
+    {
+      "id": "Quapaw",
+      "label": "Quapaw"
+    },
+    {
+      "id": "Quechua",
+      "label": "Quechua"
+    },
+    {
+      "id": "Quileute",
+      "label": "Quileute"
+    },
+    {
+      "id": "Quinault",
+      "label": "Quinault"
+    },
+    {
+      "id": "Rapa_Nui",
+      "label": "Rapa Nui"
+    },
+    {
+      "id": "Rarotongan",
+      "label": "Rarotongan"
+    },
+    {
+      "id": "Ravula",
+      "label": "Ravula"
+    },
+    {
+      "id": "Romani_Angloromani",
+      "label": "Romani Angloromani"
+    },
+    {
+      "id": "Romani_Burgenland",
+      "label": "Romani Burgenland"
+    },
+    {
+      "id": "Romani_Hungarian_Vend",
+      "label": "Romani Hungarian Vend"
+    },
+    {
+      "id": "Romani_Kalderash",
+      "label": "Romani Kalderash"
+    },
+    {
+      "id": "Romanian",
+      "label": "Romanian"
+    },
+    {
+      "id": "Romansch",
+      "label": "Romansch"
+    },
+    {
+      "id": "Rukai",
+      "label": "Rukai"
+    },
+    {
+      "id": "Russian",
+      "label": "Russian"
+    },
+    {
+      "id": "Rusyn",
+      "label": "Rusyn"
+    },
+    {
+      "id": "Saa",
+      "label": "Saa"
+    },
+    {
+      "id": "Safaitic",
+      "label": "Safaitic"
+    },
+    {
+      "id": "Saisiyat",
+      "label": "Saisiyat"
+    },
+    {
+      "id": "Saka",
+      "label": "Saka"
+    },
+    {
+      "id": "Sami_(Kildin)",
+      "label": "Sami (Kildin)"
+    },
+    {
+      "id": "Sami_(Lule)",
+      "label": "Sami (Lule)"
+    },
+    {
+      "id": "Sami_(North)",
+      "label": "Sami (North)"
+    },
+    {
+      "id": "Sami_(South)",
+      "label": "Sami (South)"
+    },
+    {
+      "id": "Samoan",
+      "label": "Samoan"
+    },
+    {
+      "id": "Sango",
+      "label": "Sango"
+    },
+    {
+      "id": "Sanskrit",
+      "label": "Sanskrit"
+    },
+    {
+      "id": "Sanskrit_(Vedic)",
+      "label": "Sanskrit (Vedic)"
+    },
+    {
+      "id": "Santali",
+      "label": "Santali"
+    },
+    {
+      "id": "Sardinian",
+      "label": "Sardinian"
+    },
+    {
+      "id": "Sariqoli",
+      "label": "Sariqoli"
+    },
+    {
+      "id": "Sarsi",
+      "label": "Sarsi"
+    },
+    {
+      "id": "Schwyzerduetsch",
+      "label": "Schwyzerduetsch"
+    },
+    {
+      "id": "Scots_(Scottish_English)",
+      "label": "Scots (Scottish English)"
+    },
+    {
+      "id": "Scottish_Gaelic",
+      "label": "Scottish Gaelic"
+    },
+    {
+      "id": "Sechelt",
+      "label": "Sechelt"
+    },
+    {
+      "id": "Seediq",
+      "label": "Seediq"
+    },
+    {
+      "id": "Selkup",
+      "label": "Selkup"
+    },
+    {
+      "id": "Sepedi",
+      "label": "Sepedi"
+    },
+    {
+      "id": "Serbian",
+      "label": "Serbian"
+    },
+    {
+      "id": "Serer",
+      "label": "Serer"
+    },
+    {
+      "id": "Sesotho",
+      "label": "Sesotho"
+    },
+    {
+      "id": "Shan",
+      "label": "Shan"
+    },
+    {
+      "id": "Shehri",
+      "label": "Shehri"
+    },
+    {
+      "id": "Shekhani",
+      "label": "Shekhani"
+    },
+    {
+      "id": "Sheko",
+      "label": "Sheko"
+    },
+    {
+      "id": "Shimaore_(Mayotte)",
+      "label": "Shimaore (Mayotte)"
+    },
+    {
+      "id": "Shona",
+      "label": "Shona"
+    },
+    {
+      "id": "Shor",
+      "label": "Shor"
+    },
+    {
+      "id": "Shoshone",
+      "label": "Shoshone"
+    },
+    {
+      "id": "Sicilian",
+      "label": "Sicilian"
+    },
+    {
+      "id": "Sidamo",
+      "label": "Sidamo"
+    },
+    {
+      "id": "Sika",
+      "label": "Sika"
+    },
+    {
+      "id": "Sindhi",
+      "label": "Sindhi"
+    },
+    {
+      "id": "Sinhalese",
+      "label": "Sinhalese"
+    },
+    {
+      "id": "Slavey_North_Hare",
+      "label": "Slavey North Hare"
+    },
+    {
+      "id": "Slovak",
+      "label": "Slovak"
+    },
+    {
+      "id": "Slovene",
+      "label": "Slovene"
+    },
+    {
+      "id": "Sogdian",
+      "label": "Sogdian"
+    },
+    {
+      "id": "Somali",
+      "label": "Somali"
+    },
+    {
+      "id": "Songe",
+      "label": "Songe"
+    },
+    {
+      "id": "Soninke",
+      "label": "Soninke"
+    },
+    {
+      "id": "Soqotri",
+      "label": "Soqotri"
+    },
+    {
+      "id": "Sorbian_Lower",
+      "label": "Sorbian Lower"
+    },
+    {
+      "id": "Sorbian_Upper",
+      "label": "Sorbian Upper"
+    },
+    {
+      "id": "Spanish",
+      "label": "Spanish"
+    },
+    {
+      "id": "Sranan",
+      "label": "Sranan"
+    },
+    {
+      "id": "Sukuma",
+      "label": "Sukuma"
+    },
+    {
+      "id": "Sumerian",
+      "label": "Sumerian"
+    },
+    {
+      "id": "Sundanese",
+      "label": "Sundanese"
+    },
+    {
+      "id": "Susu",
+      "label": "Susu"
+    },
+    {
+      "id": "Swahili",
+      "label": "Swahili"
+    },
+    {
+      "id": "Swati",
+      "label": "Swati"
+    },
+    {
+      "id": "Swedish",
+      "label": "Swedish"
+    },
+    {
+      "id": "Tabasaran",
+      "label": "Tabasaran"
+    },
+    {
+      "id": "Tagalog",
+      "label": "Tagalog"
+    },
+    {
+      "id": "Tahitian",
+      "label": "Tahitian"
+    },
+    {
+      "id": "Tajik",
+      "label": "Tajik"
+    },
+    {
+      "id": "Tamasheq",
+      "label": "Tamasheq"
+    },
+    {
+      "id": "Tamil",
+      "label": "Tamil"
+    },
+    {
+      "id": "Tanacross",
+      "label": "Tanacross"
+    },
+    {
+      "id": "Tanaina",
+      "label": "Tanaina"
+    },
+    {
+      "id": "Tanana",
+      "label": "Tanana"
+    },
+    {
+      "id": "Tashelhit",
+      "label": "Tashelhit"
+    },
+    {
+      "id": "Tatar_(Crimea)",
+      "label": "Tatar (Crimea)"
+    },
+    {
+      "id": "Tatar_(Siberia)",
+      "label": "Tatar (Siberia)"
+    },
+    {
+      "id": "Tatar_(Volga)",
+      "label": "Tatar (Volga)"
+    },
+    {
+      "id": "Tausug",
+      "label": "Tausug"
+    },
+    {
+      "id": "Telugu",
+      "label": "Telugu"
+    },
+    {
+      "id": "Temne",
+      "label": "Temne"
+    },
+    {
+      "id": "Tetela",
+      "label": "Tetela"
+    },
+    {
+      "id": "Tetum_(Timor)",
+      "label": "Tetum (Timor)"
+    },
+    {
+      "id": "Thai",
+      "label": "Thai"
+    },
+    {
+      "id": "Thompson",
+      "label": "Thompson"
+    },
+    {
+      "id": "Tibetan",
+      "label": "Tibetan"
+    },
+    {
+      "id": "Tigre",
+      "label": "Tigre"
+    },
+    {
+      "id": "Tigrigna",
+      "label": "Tigrigna"
+    },
+    {
+      "id": "Tikopia",
+      "label": "Tikopia"
+    },
+    {
+      "id": "Tiv",
+      "label": "Tiv"
+    },
+    {
+      "id": "Tlingit",
+      "label": "Tlingit"
+    },
+    {
+      "id": "Tmazight_(Riffian_Berber)",
+      "label": "Tmazight (Riffian Berber)"
+    },
+    {
+      "id": "Tocharian_A",
+      "label": "Tocharian A"
+    },
+    {
+      "id": "Tocharian_B",
+      "label": "Tocharian B"
+    },
+    {
+      "id": "Tok_Pisin",
+      "label": "Tok Pisin"
+    },
+    {
+      "id": "Tokelauan",
+      "label": "Tokelauan"
+    },
+    {
+      "id": "Tonga_(Zambia)",
+      "label": "Tonga (Zambia)"
+    },
+    {
+      "id": "Tongan",
+      "label": "Tongan"
+    },
+    {
+      "id": "Tsakhur",
+      "label": "Tsakhur"
+    },
+    {
+      "id": "Tsakonian",
+      "label": "Tsakonian"
+    },
+    {
+      "id": "Tsonga",
+      "label": "Tsonga"
+    },
+    {
+      "id": "Tsou",
+      "label": "Tsou"
+    },
+    {
+      "id": "Tswana",
+      "label": "Tswana"
+    },
+    {
+      "id": "Tulu",
+      "label": "Tulu"
+    },
+    {
+      "id": "Tumbuka",
+      "label": "Tumbuka"
+    },
+    {
+      "id": "Turkish",
+      "label": "Turkish"
+    },
+    {
+      "id": "Turkmen",
+      "label": "Turkmen"
+    },
+    {
+      "id": "Tutelo",
+      "label": "Tutelo"
+    },
+    {
+      "id": "Tuvaluan",
+      "label": "Tuvaluan"
+    },
+    {
+      "id": "Tuvan",
+      "label": "Tuvan"
+    },
+    {
+      "id": "Twana",
+      "label": "Twana"
+    },
+    {
+      "id": "Twi",
+      "label": "Twi"
+    },
+    {
+      "id": "Udmurt",
+      "label": "Udmurt"
+    },
+    {
+      "id": "Ukrainian",
+      "label": "Ukrainian"
+    },
+    {
+      "id": "Ulch",
+      "label": "Ulch"
+    },
+    {
+      "id": "Umbrian",
+      "label": "Umbrian"
+    },
+    {
+      "id": "Umbundu",
+      "label": "Umbundu"
+    },
+    {
+      "id": "Urartian",
+      "label": "Urartian"
+    },
+    {
+      "id": "Urdu",
+      "label": "Urdu"
+    },
+    {
+      "id": "Ute",
+      "label": "Ute"
+    },
+    {
+      "id": "Uvea_East",
+      "label": "Uvea East"
+    },
+    {
+      "id": "Uyghur",
+      "label": "Uyghur"
+    },
+    {
+      "id": "Uzbek",
+      "label": "Uzbek"
+    },
+    {
+      "id": "Venda",
+      "label": "Venda"
+    },
+    {
+      "id": "Venetian",
+      "label": "Venetian"
+    },
+    {
+      "id": "Veps",
+      "label": "Veps"
+    },
+    {
+      "id": "Vietnamese",
+      "label": "Vietnamese"
+    },
+    {
+      "id": "Vlach",
+      "label": "Vlach"
+    },
+    {
+      "id": "Voro",
+      "label": "Voro"
+    },
+    {
+      "id": "Votic",
+      "label": "Votic"
+    },
+    {
+      "id": "Wakhi",
+      "label": "Wakhi"
+    },
+    {
+      "id": "Walloon",
+      "label": "Walloon"
+    },
+    {
+      "id": "Wampanoag",
+      "label": "Wampanoag"
+    },
+    {
+      "id": "Waziri",
+      "label": "Waziri"
+    },
+    {
+      "id": "Welsh",
+      "label": "Welsh"
+    },
+    {
+      "id": "Winnebago",
+      "label": "Winnebago"
+    },
+    {
+      "id": "Wiyot",
+      "label": "Wiyot"
+    },
+    {
+      "id": "Wolaytta",
+      "label": "Wolaytta"
+    },
+    {
+      "id": "Wolof",
+      "label": "Wolof"
+    },
+    {
+      "id": "WongGie",
+      "label": "WongGie"
+    },
+    {
+      "id": "Xhosa",
+      "label": "Xhosa"
+    },
+    {
+      "id": "Yakut",
+      "label": "Yakut"
+    },
+    {
+      "id": "Yaqui",
+      "label": "Yaqui"
+    },
+    {
+      "id": "Yeruva",
+      "label": "Yeruva"
+    },
+    {
+      "id": "Yiddish",
+      "label": "Yiddish"
+    },
+    {
+      "id": "Yoruba",
+      "label": "Yoruba"
+    },
+    {
+      "id": "Yugh",
+      "label": "Yugh"
+    },
+    {
+      "id": "Yukaghir",
+      "label": "Yukaghir"
+    },
+    {
+      "id": "Yupik",
+      "label": "Yupik"
+    },
+    {
+      "id": "Yurok",
+      "label": "Yurok"
+    },
+    {
+      "id": "Zande",
+      "label": "Zande"
+    },
+    {
+      "id": "Zarma",
+      "label": "Zarma"
+    },
+    {
+      "id": "Zazaki",
+      "label": "Zazaki"
+    },
+    {
+      "id": "Zoque",
+      "label": "Zoque"
+    },
+    {
+      "id": "Zulu",
+      "label": "Zulu"
+    }
+  ]
+}

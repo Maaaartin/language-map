@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/glottolog/glottolog-cldf/master/cldf/classification.nex",
+  "sourceRepository": "https://github.com/glottolog/glottolog-cldf",
+  "downloadedAt": "2026-11-15T16:37:12.320Z",
+  "sha256": "0020312ad04bda75feef3cffdb15a02b7940be28576f0c5fe9944478c9d0a0ec",
+  "nodeCount": 13319,
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Map — Explore what connects us</title>
+  <meta name="description" content="An interactive map of language similarity, built from lexical comparisons.">
+  <!-- LANGUAGE_CATALOG -->
+  <link rel="modulepreload" href="/data-loader.js">
+  <link rel="modulepreload" href="/page-data.js">
+  <link rel="modulepreload" href="/dom.js">
+  <link rel="modulepreload" href="/node-shapes.js">
+  <link rel="modulepreload" href="/model.js">
+  <link rel="modulepreload" href="/layout.js">
+  <link rel="modulepreload" href="/url-state.js">
+  <link rel="modulepreload" href="/edge-style.js">
+  <link rel="modulepreload" href="/family-groups.js">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/navigation.css">
+  <script src="/vendor/d3.min.js" defer></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="/" aria-label="Language Map home"><span class="brand-mark">Ӝ</span> language<span class="brand-light">map</span><span class="beta">EXPLORER</span></a><div class="header-right"><nav class="view-nav" aria-label="View"><a href="/" aria-current="page">Graph</a><a id="geography-link" href="/map">Map</a></nav></div></header>
+  <main>
+    <aside class="sidebar">
+      <div class="eyebrow"><span></span> A LANGUAGE SIMILARITY ATLAS</div>
+      <h1>A world of<br><em>connections.</em></h1>
+      <p class="intro">Explore the threads between languages. The closer the match, the stronger the connection.</p>
+      <div class="stats"><div><strong id="node-count"><!-- LANGUAGE_COUNT --></strong><span>languages</span></div><div><strong id="pair-count"><!-- COMPARISON_COUNT --></strong><span>comparisons</span></div></div>
+      <label class="field-label" for="search">Find a language</label>
+      <div class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Search languages…" autocomplete="off"><kbd>/</kbd></div>
+      <div id="search-results" class="search-results" aria-label="Language search results"></div>
+      <section class="filter"><div class="filter-heading"><label class="field-label" for="threshold">Minimum similarity</label><output id="threshold-value" for="threshold">10%</output></div><input id="threshold" type="range" min="0" max="100" value="10" step="1"><div class="range-labels"><span>All connections</span><span>Closest matches</span></div></section>
+      <section class="filter"><div class="filter-heading"><label class="field-label" for="levels">Neighbor levels</label><output id="levels-value" for="levels">1</output></div><input id="levels" type="range" min="1" max="5" value="1" step="1"><div class="range-labels"><span>Direct neighbors</span><span>5 levels</span></div></section>
+      <p class="shape-legend" aria-label="Neighbor level shapes">1 ○ Circle · 2 ◇ Diamond · 3 △ Triangle<br>4 □ Square · 5 ⬡ Hexagon</p>
+
+      <section id="details" class="details" aria-live="polite"></section>
+      <div class="sidebar-footer"><span class="little-orbit">◎</span><p>Each connection is a measured word comparison. Similarity is a clue, not a family tree. <a href="http://elinguistics.net/Compare_Languages.aspx" target="_blank" rel="noopener noreferrer">About the data ↗</a></p></div>
+    </aside>
+    <section class="map" aria-label="Interactive language similarity graph">
+      <div class="map-top"><div><span class="live-dot"></span><span>THE LANGUAGE NETWORK</span></div><span id="coverage" class="coverage"></span></div>
+      <svg id="graph" role="group" aria-label="Language groups. Select a group to expand its languages, then select a language to explore its comparison."></svg>
+      <section id="start-panel" class="start-panel" aria-labelledby="start-title">
+        <span class="start-symbol" aria-hidden="true">◎</span>
+        <div class="eyebrow">YOUR EXPLORATION STARTS HERE</div>
+        <h2 id="start-title">Choose a language.</h2>
+        <p>Find a language to place at the center.<br>Then follow its connections.</p>
+        <label for="start-search" class="field-label">Language</label>
+        <input id="start-search" type="search" placeholder="Search languages…" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="start-results" disabled>
+        <div id="start-results" role="listbox" aria-label="Languages" hidden></div>
+        <p id="start-status" role="status">Loading language list…</p>
+      </section>
+      <div id="map-message" class="map-message" role="status" hidden></div>
+      <div class="map-bottom"><div class="legend"><div class="legend-title">THICKER LINKS = HIGHER SIMILARITY</div><div class="legend-scale"><span>Less similar</span><i></i><span>More similar</span></div><p id="edge-count"></p></div><div class="map-controls"><button id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button id="reset" aria-label="Center selected language or fit graph" title="Center selected language or fit graph">⤢</button></div></div>
+      <div class="map-hint">Drag to explore <span>·</span> Scroll to zoom <span>·</span> Select a language</div>
+      <div id="tooltip" class="tooltip" hidden></div>
+    </section>
+  </main>
+  <section id="group-settings" class="language-groups floating-settings" aria-label="Language grouping settings"><button type="button" id="group-settings-handle" class="settings-handle" aria-label="Move grouping settings. Drag or use arrow keys."><span aria-hidden="true">⠿</span> Language groups</button><div class="settings-content"><label class="group-toggle"><input type="checkbox" id="group-languages"> Group languages</label><label class="field-label" for="grouping">Group languages by</label><select id="grouping"><option value="branch">Family and subgroup</option><option value="family">Family</option></select><ul id="family-legend" aria-label="Language groups and colors"></ul><p>Glottolog classification · Exact name matches</p></div></section>
+</body>
+</html>

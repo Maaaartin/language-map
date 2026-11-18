@@ -1,0 +1,39 @@
+{
+  "name": "elinguistics-language-map",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "postinstall": "npm run decompress:comparisons && node scripts/postinstall.mjs",
+    "download:glottolog": "node scripts/download-glottolog.mjs",
+    "download:classification": "node --import tsx scripts/download-classification.mjs",
+    "map:languages": "node --import tsx scripts/map-languages.ts",
+    "languages": "tsx scripts/languages.ts",
+    "compare": "node --import tsx scripts/compare.ts",
+    "import:all": "node --import tsx scripts/compare.ts",
+    "compress:comparisons": "tar -czf comparisons.tar.gz data/comparisons/",
+    "decompress:comparisons": "node scripts/decompress-comparisons.mjs",
+    "pretest": "node scripts/web-compile.mjs",
+    "test": "node --import tsx --test tests/*.test.ts web/tests/*.test.mjs",
+    "dev": "node --import tsx scripts/web-watch.mjs",
+    "build": "node --import tsx scripts/web-build.mjs",
+    "graph:split": "node --import tsx scripts/split-graph.ts",
+    "typecheck": "tsc --noEmit && tsc --project tsconfig.web.json --noEmit"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "csv-parse": "^7.0.3",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^22.0.0",
+    "d3": "^7.9.2",
+    "jsdom": "^31.0.1",
+    "leaflet": "^1.9.4",
+    "typescript": "^5.9.0"
+  }
+}
